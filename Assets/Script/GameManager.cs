@@ -167,4 +167,26 @@ public class GameManager : MonoBehaviour
     {
         isPlaying = false;
     }
+
+    [Button]
+    public void TestRecursion()
+    {
+        TraverseRecursive(timeline.head);
+    }
+
+    void TraverseRecursive(Node<TurnData> node)
+    {
+        if (node == null)
+            return;
+
+        TurnData data = node.Value;
+
+        Debug.Log(
+            "Pos: " + data.PlayerPosition +
+            " | Vida: " + data.PlayerLife +
+            " | Ataque: " + data.PlayerAttack
+        );
+
+        TraverseRecursive(node.Next);
+    }
 }
