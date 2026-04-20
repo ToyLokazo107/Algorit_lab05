@@ -1,1 +1,1 @@
-# Algorit_lab05
+# Algoritmos_Lab05
